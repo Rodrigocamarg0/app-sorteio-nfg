@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QR Code Scanner</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <link rel="stylesheet" href="src/styless.css" />
+    <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <style>
+      h1 {
+      font-family: 'Roboto Mono', monospace;
+      }
+      #qr-result {
+      font-size: 1.2em;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 700px;
+      background-color: white;
+      border-radius: 16px;
+      width: 560px;
+      font-family: 'Roboto Mono', monospace;
+      }
+      #painelConteudo{
+        display: flex;
+        margin: auto;
+        background-color: white;
+        width: 600px;
+        border-radius: 16px;
+        place-content: center;
+        margin: auto;
+        /* padding: 40px 0; */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <h1>Us Guri Sefaz</h1>
+
+      <a id="btn-scan-qr">
+        <img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/07/1499401426qr_icon.svg">
+      </a>
+
+      <canvas hidden="" id="qr-canvas"></canvas>
+
+      <div id="qr-result" hidden="">
+        <b>Dados adicionados na tablela:</b><br> <span id="outputData"></span>
+      </div>
+
+      <div id="painelConteudo" hidden="">
+            
+       
+      </div>
+    </div>
+    </div>
+
+    <script src="src/qrCodeScanner.js"></script>
+  </body>
+</html>

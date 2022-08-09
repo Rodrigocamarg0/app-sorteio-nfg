@@ -1,0 +1,26 @@
+{
+  "name": "usgurisefazprapagar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "add": "^2.0.6",
+    "axios": "^0.27.2",
+    "cheerio": "^1.0.0-rc.12",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "google-spreadsheet": "^3.3.0",
+    "googleapis": "^105.0.0",
+    "iso-8859-2": "^3.0.4",
+    "or": "^0.2.0",
+    "puppeteer": "^15.5.0",
+    "xpath-html": "^1.0.3",
+    "yarn": "^1.22.19"
+  }
+}

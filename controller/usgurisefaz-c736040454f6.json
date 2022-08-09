@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "usgurisefaz",
+  "private_key_id": "c736040454f6c979d1c66594db08860d1226aeb5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCxBTyeTaB3+EN2\nho1lYLN5SqeHZ+nH8+bkN144Pbt+wz8s3IoLBBHpVphh+S0Xc7fc+O5tQSurdXxP\nqUDlckuV8kLbZcI5rosCsFNHOFnzAiBLvMYzqrtcA57azp/u2h0LE9kZKqRJAr8h\nYUlN8+bTSXUDRCYPBkrr11SqU33dYIkzgdcd2Bpo/On9QYXJ0XKLvytETBqaKIFg\nxUF/810u+zwg1+IWAqzB+fK1+FeKZUYQmGvJ+rp4In9J0kBDBHekmEYlTI14GY8N\nQPIPg3o6yAwCT585a1hQ8ODOHLBMCRs9exN6Bo5AN4exqPeBTREaaMy6Cvd32s2m\nmfeXvDfBAgMBAAECggEAGbbZB2XfWY4GvsDs6T0S1RuzGkhN/W3ArIYeeaz9/3v9\nQVcH9nGw6GRb3l+D3VRB8Sd3+wbsgQuf8zJy6uGfeTin3Zb6j8Z7CvjyH/Zfmp1E\nc7wITpkOfl9IRCCfuuKUNXe8oZtAIhr0CLVJILm9XhPdm4vau3P+jiPJeLSIJBAT\nN7T2c5TMKtamPbI19Eyb7uokyjvJLNd6BJGVvaIL3P4Lw9Bj8n90p+WD8Tiqi3Oc\nt6GxpechDJEf+ndv7BRrtduCpJ2YK+GBdpGK1Ge3EXjR0+QwqDLNn17FABt9zDuN\nGXfQLNw+HrwaHsL2P5jjS/i1prs7jNcEYBvd8jSIwQKBgQD6DltSQP7gcchpR9BJ\ndf60Jw82aukgSVLLFSq7V3n7lRGlI/QD457r645qibUJPQ8DY/0k3RL+RO8/1zgF\nwIq4Fyhb6DZXgvaH0kkbJXncuuXQzoQNrGPzr9ROgL20hOFHjLhJfOIX751xtZPn\nmuZwNvP13XXvAJ35VyhhwS4lNwKBgQC1OnFusKkLghnMUPdgSyY01T/9xEnud4o7\nx6Jr7wqNFSDbWRFEFsMTrbPtGdpwLmiKp3x6yBkG9ugL75s9bUbE3o+Gaq/lrQZF\n1Hy/829GxZZrDHr9NgZgRLRVPJP1+hqrHJ8/wJK93yu0BnyePqA0VZSiYswLQq2F\n0BUiJvIGxwKBgQC7f0pgedXji83fi3aVrsFGakdQ4YdeqzxGhN+ey+/ugg9SCYxt\n4h6G/gCyyAEUJVF9lFr7aj1UpXHUJ9edEIuzj8G2cH9WzR94Jmikz0v6A7ZRBJkl\n+46S6dPC7WvR0RVu5ghFKjwKAKTI34NA1fhWSg5R3DYS+R57GSxxaD3mrwKBgQCr\n5qe56vAt7lYyK4q6WA4Bh1WPjCTkgZcpZQ93eeJ0OFpWNYHfKAgaHmXQvPkp95tK\nCdxVSoASzxkEWV7TQVgjXUieo4v9O8X7brZ2DJ68bqdjGw9+J0SdBA5Z24AtjfLF\n4/xaKHwIhiuaM5z5LUYg3hyCe1w4QiL+DoY9QtvH+QKBgGJcGKO3iv+o9bP5UEor\nuieA8U/TPdgrBBbYQsGimVqutfq7zX5rZ7Xwufn/GMNJ8c0EOcJgX2qzhL+oQ32u\nV5wJwY2dOq4GlTXObx4S5zHbu8/fdmxFi/TKXCRWaoM8GJSWxsaOT0Fcw/w3A5ff\n3nNWxJ47fSci0B/NLz4q9lpk\n-----END PRIVATE KEY-----\n",
+  "client_email": "usgurisefaz-nodejs@usgurisefaz.iam.gserviceaccount.com",
+  "client_id": "101578424629606259917",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/usgurisefaz-nodejs%40usgurisefaz.iam.gserviceaccount.com"
+}
