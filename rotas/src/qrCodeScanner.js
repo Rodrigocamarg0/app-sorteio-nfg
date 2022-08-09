@@ -20,7 +20,7 @@ qrcode.callback = res => {
     let linkArray = res.split(".aspx?p=");
     let sefazID = linkArray[linkArray.length - 1];
     //let sefazAPI = `${window.location.host}/api/sefaz/${sefazID}`
-    let sefazAPI = `http://127.0.0.1:3000/api/sefaz/${sefazID}`
+    let sefazAPI = `/api/sefaz/${sefazID}`
     
     scanning = false;
 
