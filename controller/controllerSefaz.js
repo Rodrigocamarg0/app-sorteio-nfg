@@ -35,7 +35,7 @@ exports.pegarValor = async (req, res) => {
         const compra = await businessSefaz.listar(idNFe);
         maoe = await getAuthSheets()
         const createRow = await businessGoogle.create(compra, await getAuthSheets());
-
+        console.log(compra)
         res.json(compra);                
     }
     catch (err) {
