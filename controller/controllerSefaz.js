@@ -49,6 +49,24 @@ exports.pegarValor = async (req, res) => {
     }
 }
 
+exports.cadastrarNota = async (req, res) => {
+    const idNFe = req.params.id;    
+    
+    try{
+        const compra = await businessSefaz.cadastrarNota(idNFe);
+        res.json(compra);
+    }
+    catch (err) {
+        console.log(err)
+        if(err.status) {
+            res.status(err.status).json(err);
+        }
+        else {
+            res.status(500).json({message: "Erro nao identificado"});            
+        }
+    }
+}
+
 
 exports.getNota = async (req, res) => {
     const idNFe = req.params.id;    

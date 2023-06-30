@@ -10,82 +10,64 @@ const painelConteudo = document.getElementById("painelConteudo");
 const outputData = document.getElementById("outputData");
 const btnScanQR = document.getElementById("btn-scan-qr");
 
+const notaId = document.getElementById("nota-id");
+
+const alertDiv = document.getElementById("alert-warning");
+const alertMsg = document.getElementById("alert-message");
+
+alertDiv.hidden = true;
+
 let scanning = false;
 
 qrcode.callback = res => {
   if (res) {
     //outputData.innerText = res;
-    
-    console.log(res);
-    let linkArray = res.split(".aspx?p=");
-    let sefazID = linkArray[linkArray.length - 1];
-    //let sefazAPI = `${window.location.host}/api/sefaz/${sefazID}`
-    let sefazAPI = `/api/sefaz/${sefazID}`
-    
     scanning = false;
 
     video.srcObject.getTracks().forEach(track => {
       track.stop();
     });
+    alertDiv.hidden = true;
 
-    console.log(sefazAPI)
+    console.log(res);
+    let linkArray = res.split(".aspx?p=");
+    let sefazID = linkArray[linkArray.length - 1];
+    //let sefazAPI = `${window.location.host}/api/sefaz/${sefazID}`
+    let sefazAPI = `/api/sefaz/${sefazID}`
+
+    console.log(sefazAPI);
+
     var xmlhttp = new XMLHttpRequest();
-    
-    xmlhttp.onreadystatechange = function()
-    {
-      if (this.readyState == 4 && this.status == 200)
-      {
+
+    xmlhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
         //Use parse() method to convert JSON string to JSON object
         var responseJsonObj = JSON.parse(this.responseText);
 
-        console.log( responseJsonObj.valor_total );
-        
+        console.log(responseJsonObj.valor_total);
+
         valor_total = responseJsonObj.valor_total
-        outputData.innerText = `\n${responseJsonObj.loja}\nR$ ${responseJsonObj.valor_total}\n${responseJsonObj.data}`;
-      }
-    };
+        outputData.innerText = `\n${responseJsonObj.loja}\n${responseJsonObj.data}\n${responseJsonObj.nome}\n${responseJsonObj.cpf}`;
+        notaId.innerText = responseJsonObj.codigo.split("|")[0];
+        qrResult.hidden = false;
+        canvasElement.hidden = true;
+        btnScanQR.hidden = false;
 
-    var getNotaxmlhttp = new XMLHttpRequest();
-    
-    getNotaxmlhttp.onreadystatechange = function()
-    {
-      if (this.readyState == 4 && this.status == 200)
-      {
-        //Use parse() method to convert JSON string to JSON object
+      }
+      else {
         var responseJsonObj = JSON.parse(this.responseText);
-
-        painelConteudo.innerHTML = responseJsonObj.html;
+        canvasElement.hidden = true;
+        btnScanQR.hidden = false;
+        alertDiv.hidden = false;
+        alertMsg.innerHTML = responseJsonObj.message;
       }
     };
 
-    xmlhttp.open("GET", `/api/sefaz/${sefazID}`, true);
+
+    xmlhttp.open("GET", `/api/sefaz/cadastrar/${sefazID}`, true);
     xmlhttp.send();
 
-    getNotaxmlhttp.open("GET", `/api/sefaz/getNota/${sefazID}`, true);
-    getNotaxmlhttp.send();
 
-    qrResult.hidden = false;
-    canvasElement.hidden = true;
-    btnScanQR.hidden = false;
-    painelConteudo.hidden = false;
-
-
-
-  
-    
-    
-    // fetch(sefazAPI, { method: 'GET', mode: 'no-cors'}).then(response => {
-    //   console.log(response.valor_pago);
-    //   return response.json();
-    // }).then(data => {
-    //   // Work with JSON data here
-    //   console.log(data);
-    // }).catch(err => {
-    //   // Do something for an error here
-    //   console.log("Error Reading data " + err);
-    // });
-
-    
   }
   return res;
 };
@@ -93,7 +75,7 @@ qrcode.callback = res => {
 btnScanQR.onclick = () => {
   navigator.mediaDevices
     .getUserMedia({ video: { facingMode: "environment" } })
-    .then(function(stream) {
+    .then(function (stream) {
       scanning = true;
       qrResult.hidden = true;
       btnScanQR.hidden = true;

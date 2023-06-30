@@ -5,10 +5,8 @@ const controller = require('../controller/controllerSefaz');
 //const controGoogle = require('./business/businessGoogleSheets');
 
 
-
-// sendFile will go here
 rota.get('/:id', controller.pegarValor);
-// sendFile will go here
+rota.get('/cadastrar/:id', controller.cadastrarNota);
 rota.get('/getNota/:id', controller.getNota);
 
 

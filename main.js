@@ -11,6 +11,12 @@ app.use(express.static('rotas'))
 const compraRota = require('./rotas/rotasSefaz');
 app.use('/api/sefaz', compraRota);
 
+const usuarioRota = require('./rotas/rotasUsuario');
+app.use('/api/usuario', usuarioRota);
+
+const notaRota = require('./rotas/rotasNotas');
+app.use('/api/nota', notaRota);
+
 const webRota = require('./rotas/rotasWeb');
 app.use('/web', webRota);
 

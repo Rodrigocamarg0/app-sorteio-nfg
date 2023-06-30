@@ -1,48 +1,111 @@
 html {
-    height: 100%;
-  }
-  
-  body {
-    font-family: sans-serif;
-    padding: 0 10px;
-    height: 100%;
-    background: black;
-    margin: 0;
-  }
-  
-  h1 {
-    color: white;
-    margin: 0;
-    padding: 15px;
-  }
-  
-  #container {
-    text-align: center;
-    margin: 0;
-  }
-  
-  #qr-canvas {
-    margin: auto;
-    width: calc(100% - 20px);
-    max-width: 400px;
-  }
-  
-  #btn-scan-qr {
-    cursor: pointer;
-  }
-  
-  #btn-scan-qr img {
-    height: 10em;
-    padding: 15px;
-    margin: 15px;
-    background: white;
-  }
-  
-  #qr-result {
-    font-size: 1.2em;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 700px;
-    background-color: white;
-  }
-  
+  height: 100%;
+  font-family: 'Roboto Mono', monospace;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 0;
+  height: 100%;
+  background: #FFFFFF;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  margin: 0;
+  padding: 15px;
+}
+
+#container {
+  text-align: center;
+  margin: 0;
+  flex: 1;
+}
+
+#qr-canvas {
+  margin: auto;
+  width: calc(100% - 20px);
+  max-width: 400px;
+}
+
+#btn-scan-qr {
+  cursor: pointer;
+  background-color: #ff478d;
+  color: #FFFFFF;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  margin: 20px;
+}
+
+#btn-scan-qr:hover {
+  background-color: #fc6da4;
+}
+
+/* Modify the background color */
+
+.navbar-custom {
+  background-color: #fc6da4;
+  color: white;
+}
+
+/* Modify brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+  color: #fc6da4;
+}
+
+
+#btn-scan-qr img {
+  height: 10em;
+  padding: 15px;
+  margin: 15px;
+  background: white;
+}
+
+
+footer {
+  margin: auto;
+  max-width: 500px;
+  min-height: 50px;
+  text-align: center;
+}
+
+
+
+#qr-result {
+  font-size: 1.2em;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 700px;
+  background-color: white;
+  border-radius: 16px;
+  width: 560px;
+  font-family: 'Roboto Mono', monospace;
+  min-width: 300px;
+}
+
+#painelConteudo {
+  display: flex;
+  margin: auto;
+  background-color: white;
+  width: 600px;
+  border-radius: 16px;
+  place-content: center;
+  margin: auto;
+  /* padding: 40px 0; */
+}
+
+#img-logo {
+  width: 250px;
+  margin: 10px;
+}
+
+a.nav-link.active, a.nav-link {
+  color: white!important;
+}
+
