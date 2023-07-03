@@ -103,7 +103,7 @@ exports.cadastrarNota = async (idNFe) => {
                 const valor_descontos = parseFloat(nodesCompra[nodesCompra.length - 5].getText().replace(',', '.'))
                 const valor_total = (valor_pago - valor_descontos).toFixed(2)
 
-                const regex = /CPF:\s*(\d{3}\.\d{3}\.\d{3}-\d{2})/;
+                const regex = /(\d{3}\.\d{3}\.\d{3}-\d{2})/;
                 
                 let match
 
