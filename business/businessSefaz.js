@@ -114,8 +114,8 @@ exports.cadastrarNota = async (idNFe) => {
                     console.log(match)
                     if (match) {
                       cpf = match[0];
-                      cpf = cpf.replaceAll(".","");
-                      cpf = cpf.replaceAll("-","");
+                      cpf = cpf.replace(/\./g, "");
+                      cpf = cpf.replace(/-/g, "");
                     }
                     nome = nome_cpf.replace(/^.*-\s*/, '').trim().replace(/\s+/g, ' ');
                   } catch (error) {
