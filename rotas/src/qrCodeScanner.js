@@ -116,7 +116,7 @@ qrcode.callback = res => {
         notaId.innerText = responseJsonObj.codigo.split("|")[0];
         qrResult.hidden = false;
         btnScanQR.hidden = false;
-        alertMsg.hidden = true;-
+        alertMsg.hidden = true;
         spinnerLoading.hidden = true;
 
       }
