@@ -12,6 +12,8 @@ exports.consultarCPF = async (cpf) => {
             let erro = new Error();
             erro.message = "CPF não encontrado";
             erro.status = 404;
+            console.log(cpf)
+            erro.cpf = cpf;
             throw erro;
         }
     } catch (err) {

@@ -109,3 +109,31 @@ a.nav-link.active, a.nav-link {
   color: white!important;
 }
 
+.loading-spinner {
+  margin: 20px;
+}
+
+.spinner-border {
+  color: #fc6da4;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #d4d4d4;
+  border-bottom-color: #ff478d;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: auto;
+  animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+  } 

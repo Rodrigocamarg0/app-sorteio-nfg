@@ -24,6 +24,7 @@ exports.computarNota = async (nota) => {
         else {
             let erro = new Error();
             erro.message = "CPF não encontrado!";
+            erro.cpf = nota.cpf;
             erro.status = 404;
             throw erro;
         }
