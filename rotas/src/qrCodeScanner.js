@@ -127,7 +127,7 @@ qrcode.callback = res => {
         alertDiv.hidden = false;
         spinnerLoading.hidden = true;
         alertMsg.innerHTML = responseJsonObj.message;
-        if (responseJsonObj.message == "CPF não encontrado!") {
+        if (responseJsonObj.status == 404) {
           modalCadastro.show();
           currentCPF = responseJsonObj.cpf;
         }
