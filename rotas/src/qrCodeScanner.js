@@ -129,8 +129,8 @@ qrcode.callback = res => {
         spinnerLoading.hidden = true;
         alertMsg.innerHTML = responseJsonObj.message;
         if (responseJsonObj.status == 404) {
-          modalCadastro.show();
           currentCPF = responseJsonObj.cpf;
+          modalCadastro.show();
         }
       }
     };

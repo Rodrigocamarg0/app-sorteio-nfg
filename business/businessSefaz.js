@@ -131,6 +131,7 @@ exports.cadastrarNota = async (idNFe) => {
                     loja: nodesLoja[0].getText(),
                     // data: '26/07/2023 22:58:28',
                     data: invertDayMonth(nodesLoja[2].getText().substring(nodesLoja[2].getText().length - 19)),
+                    //data: nodesLoja[2].getText().substring(nodesLoja[2].getText().length - 19),
                     cpf: cpf,
                     nome: nome,
                     codigo: idNFe.split("|")[0] + 12312332
