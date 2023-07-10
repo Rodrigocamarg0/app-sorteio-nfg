@@ -130,7 +130,7 @@ exports.cadastrarNota = async (idNFe) => {
                     valor: valor_total,
                     loja: nodesLoja[0].getText(),
                     // data: '26/07/2023 22:58:28',
-                    data: nodesLoja[2].getText().substring(nodesLoja[2].getText().length - 19),
+                    data: invertDayMonth(nodesLoja[2].getText().substring(nodesLoja[2].getText().length - 19)),
                     cpf: cpf,
                     nome: nome,
                     codigo: idNFe.split("|")[0] + 12312332
@@ -159,3 +159,13 @@ exports.cadastrarNota = async (idNFe) => {
         throw err;
     }
 }
+
+function invertDayMonth(dateString) {
+    // Split the date string into day, month, and year components
+    const [day, month, year] = dateString.split('/');
+  
+    // Create a new date string with the day and month components inverted
+    const invertedDateString = `${month.padStart(2, '0')}/${day.padStart(2, '0')}/${year}`;
+  
+    return invertedDateString;
+  }

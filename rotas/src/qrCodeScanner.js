@@ -91,6 +91,7 @@ qrcode.callback = res => {
       track.stop();
     });
     alertDiv.hidden = true;
+    spinnerLoading.hidden = false;
     canvasElement.hidden = true;
 
     console.log(res);
@@ -152,7 +153,6 @@ btnScanQR.onclick = () => {
       btnScanQR.hidden = true;
       painelConteudo.hidden = true;
       canvasElement.hidden = false;
-      spinnerLoading.hidden = false;
       // spinnerLoading.hidden = false;
       video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
       video.srcObject = stream;

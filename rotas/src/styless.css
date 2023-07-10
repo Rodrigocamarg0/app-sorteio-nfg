@@ -1,14 +1,16 @@
 html {
   height: 100%;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Anonymous Pro', monospace;
+  font-family: 'Fasthand', cursive;
+  scroll-behavior: smooth;
+
 }
 
 body {
   font-family: sans-serif;
   padding: 0;
-  height: 100%;
   background: #FFFFFF;
-  margin: 0;
+  margin-top: 60px!important;
   display: flex;
   flex-direction: column;
 }
@@ -22,18 +24,19 @@ h1 {
 #container {
   text-align: center;
   margin: 0;
-  flex: 1;
+  height: 100vh;
+  margin-top: 30px; 
 }
 
 #qr-canvas {
-  margin: auto;
+  margin: 30px;
   width: calc(100% - 20px);
   max-width: 400px;
 }
 
 #btn-scan-qr {
   cursor: pointer;
-  background-color: #ff478d;
+  background-color: #6FA413;
   color: #FFFFFF;
   padding: 10px;
   border: none;
@@ -43,20 +46,21 @@ h1 {
 }
 
 #btn-scan-qr:hover {
-  background-color: #fc6da4;
+  background-color: #6FA413;
 }
 
 /* Modify the background color */
 
 .navbar-custom {
-  background-color: #fc6da4;
+  background-color: #86c617;
   color: white;
 }
 
 /* Modify brand and text color */
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
-  color: #fc6da4;
+  color: #d5d5d5;
+  /* color: #6FA413; */
 }
 
 
@@ -69,10 +73,11 @@ h1 {
 
 
 footer {
-  margin: auto;
-  max-width: 500px;
+  width: 100%;
   min-height: 50px;
   text-align: center;
+  background-color: #f8f8f8;
+  padding: 10px;
 }
 
 
@@ -101,8 +106,8 @@ footer {
 }
 
 #img-logo {
-  width: 250px;
-  margin: 10px;
+  width: 330px;
+  
 }
 
 a.nav-link.active, a.nav-link {
@@ -114,14 +119,14 @@ a.nav-link.active, a.nav-link {
 }
 
 .spinner-border {
-  color: #fc6da4;
+  color: #6FA413;
 }
 
 .loader {
   width: 48px;
   height: 48px;
   border: 5px solid #d4d4d4;
-  border-bottom-color: #ff478d;
+  border-bottom-color: #86c617;
   border-radius: 50%;
   display: inline-block;
   box-sizing: border-box;
@@ -137,3 +142,30 @@ a.nav-link.active, a.nav-link {
       transform: rotate(360deg);
   }
   } 
+
+
+#sobre {
+  margin-top: 30px; 
+  height: 90vh;
+}
+
+#regras {
+  margin-top: 30px; 
+  height: 90vh;
+}
+ .spacer{
+  height: 80px;
+ }
+
+
+ p {
+justify-content: end!important; 
+}
+
+#nfgLogo {
+  width: 40%;
+}
+
+#iedcLogo {
+  width: 40%;
+}
