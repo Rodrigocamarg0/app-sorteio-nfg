@@ -36,3 +36,21 @@ exports.cadastro = async (req, res) => {
         }
     }
 }
+
+exports.listUsuarios = async (req, res) => {
+
+    try {
+        const usuarioArray = await businessUsuario.listUsuarios();
+        res.status(200).json(usuarioArray);
+    }
+    catch (err) {
+        console.log(err)
+        if (err.status) {
+            res.status(err.status).json(err);
+        }
+        else {
+            res.status(500).json({ message: "Erro nao identificado" });
+        }
+    }
+}
+

@@ -76,3 +76,26 @@ exports.totalDeNotas = async (cpf) => {
         throw error; 
     }
 }
+
+exports.listUsuarios = async () => {
+
+    var sql = 'SELECT * from list_users_with_notas_total()';
+
+    const cliente = new Client(conexao);
+    cliente.connect();
+    
+    try{
+        const resultado = await cliente.query(sql);
+        cliente.end();
+        return(resultado.rows);
+    }
+    catch(err) {
+        let error = {};
+        error.name = err.name;
+        error.message = err.message;
+        error.status = 500; 
+        throw error; 
+    }
+}
+
+

@@ -38,3 +38,20 @@ exports.cadastrarUsuario = async (usuario) => {
         throw err;
     }
 }
+
+exports.listUsuarios = async () => {
+    try {
+        const usuariosArray = await persistenceUsuario.listUsuarios();
+        if (usuariosArray) {
+            return usuariosArray;
+        }
+        else {
+            let erro = new Error();
+            erro.message = "Algo deu errado";
+            erro.status = 500;
+            throw erro;
+        }
+    } catch (err) {
+        throw err;
+    }
+}
